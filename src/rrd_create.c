@@ -805,7 +805,7 @@ int rrd_create_fn(
     free(unknown);
 
 #ifndef WIN32
-    fdatasync(rrd_file);
+    fsync(rrd_file);
 #endif
 
     rrd_free2(rrd);
