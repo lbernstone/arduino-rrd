@@ -41,6 +41,7 @@
 #define ERRBUFLEN 256
 #define CTX (rrd_get_context())
 
+/*
 void rrd_set_error(
     char *fmt,
     ...)
@@ -56,6 +57,7 @@ void rrd_set_error(
 #endif
     va_end(argp);
 }
+*/
 
 int rrd_test_error(
     void)
