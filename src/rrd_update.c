@@ -580,6 +580,10 @@ int rrd_lock(
         } else {
             rcstat = -1;
         }
+#elif defined(ESP32)
+// flock does not work on esp32, so 
+// this needs to have a mutex wrapper.
+        return 0;
 #else
         struct flock lock;
 
