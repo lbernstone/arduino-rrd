@@ -283,9 +283,12 @@ rrd_context_t *rrd_force_new_context(void);
     time_t *);
 
 /* HELPER FUNCTIONS */
+/*
     void      rrd_set_error(
     char *,
     ...);
+*/
+#define rrd_set_error(...) ESP_LOGE(__FILE__, ##__VA_ARGS__)
     void      rrd_clear_error(
     void);
     int       rrd_test_error(
